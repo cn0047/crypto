@@ -1,0 +1,23 @@
+{
+    "name": "crypto/crypto",
+    "type": "library",
+    "description": "Simple wrapper for php mcrypt.",
+    "keywords": ["php", "mcrypt", "crypt", "encrypt", "decrypt"],
+    "homepage": "https://github.com/codeName007/crypto",
+    "authors": [
+        {
+            "name": "Vladimir Kovpak",
+            "email": "cn007b@gmail.com",
+            "homepage": "http://cn007b.tumblr.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crypto\\": "src/Crypto"
+        }
+    }
+}
