@@ -21,7 +21,6 @@ class Crypto
      *
      * @param string $key Key with which the data will be encrypted.
      * @throws \InvalidArgumentException When key not string or empty.
-     * @return void.
      */
     public function __construct($key)
     {
