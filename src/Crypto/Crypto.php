@@ -27,7 +27,7 @@ class Crypto
         if (!is_string($key)) {
             throw new \InvalidArgumentException('Key should be string.');
         }
-        if (empty($key)) {
+        if (empty($key) || $key===null || !isset($key)) {
             throw new \InvalidArgumentException("Key can't be empty.");
         }
         $this->key = $key;
@@ -44,6 +44,10 @@ class Crypto
     {
         if (!is_string($text)) {
             throw new \InvalidArgumentException('Text should be string.');
+        }
+
+        if (empty($text)|| !isset($text) || $text==='' || $text===null) {
+            throw new \InvalidArgumentException("text can't be empty.");
         }
         $ivSize = mcrypt_get_iv_size(self::CIPHER, self::MODE);
         $iv = mcrypt_create_iv($ivSize, MCRYPT_DEV_RANDOM);
@@ -63,6 +67,9 @@ class Crypto
     {
         if (!is_string($encryptedData)) {
             throw new \InvalidArgumentException('Encrypted data should be string.');
+        }
+        if (empty($encryptedData) || $encryptedData==='' || $encryptedData===null) {
+            throw new \InvalidArgumentException("encryptedData can't be empty.");
         }
         $encryptedData = base64_decode($encryptedData);
         $ivSize = mcrypt_get_iv_size(self::CIPHER, self::MODE);
