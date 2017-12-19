@@ -1,6 +1,7 @@
 {
     "name": "crypto/crypto",
     "type": "library",
+    "license": "MIT",
     "description": "Simple wrapper for php mcrypt.",
     "keywords": ["php", "mcrypt", "crypt", "encrypt", "decrypt"],
     "homepage": "https://github.com/codeName007/crypto",
